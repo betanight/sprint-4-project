@@ -5,7 +5,7 @@ import os
 
 # Correct the path to point to the dataset in the root directory
 root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-dataset_path = os.path.join(root_dir, 'vehicles_us.csv')
+dataset_path = os.path.join(root_dir, 'notebooks/vehicles_us_cleaned.csv')
 
 print("Root Directory:", root_dir)
 print("Dataset Path:", dataset_path)
