@@ -30,14 +30,16 @@ st.write(f"Displaying data for model year {selected_year}:")
 st.write(filtered_df)
 
 # Add filter for four-wheel drive
-four_wheel_drive_options = df['is_4wd'].dropna().unique()
-four_wheel_drive_options = sorted(four_wheel_drive_options)  # Optional: sort the options if desired
+# Filter options for boolean values
+four_wheel_drive_options = [True, False]
 
-selected_4wd = st.sidebar.selectbox("Select Four-Wheel Drive", options=["All"] + list(four_wheel_drive_options))
+# Add filter for four-wheel drive
+selected_4wd = st.sidebar.selectbox("Select Four-Wheel Drive", options=["All"] + four_wheel_drive_options)
 
 # Filter the DataFrame based on user input
 if selected_4wd != "All":
     filtered_df = filtered_df[filtered_df['is_4wd'] == selected_4wd]
+
 
 
 # Example Plot
