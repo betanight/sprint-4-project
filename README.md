@@ -1,13 +1,13 @@
 # Sprint-4-project
 Project Overview
-Welcome to the Car Database Analysis Project! This project explores a comprehensive dataset of vehicles with various specifications. Below is a brief guide to help you navigate through the project's components:
+Welcome to the Car Database Analysis Project! This project explores a comprehensive dataset of vehicles with various specifications. Everything in this project can be found in the *_sprint-4-venv_* Below is a brief guide to help you navigate through the project's components:
 
 Exploratory Data Analysis (EDA) and Statistical Data Analysis (SDA):
 
-All the exploratory and statistical analysis of the data are documented in the Jupyter notebook named EDA.ipynb, located in the notebooks folder.
+All the exploratory and statistical analysis of the data are documented in the *_notebooks_* folder named *_EDA.ipynb_*, located in the notebooks folder.
 Streamlit Application:
 
-The app, app.py, can be found in the root directory. This app allows users to filter and explore the car data interactively, offering various visualizations to help you find a vehicle that suits your budget and preferences.
+The app, *_app.py_*, can be found in the *_Scripts_* folder. This app allows users to filter and explore the car data interactively, offering various visualizations to help you find a vehicle that suits your budget and preferences.
 
 Filtering and Visualization:
 
