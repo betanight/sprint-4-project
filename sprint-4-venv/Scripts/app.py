@@ -29,11 +29,12 @@ df['model_year'] = df['model_year'].astype(str)
 # Making all unique values in column condition more professional:
 df['condition'] = df['condition'].replace('like new', 'nearly new')
 
-# Changing cylinders column to integer:
-df['cylinders'] = df['cylinders'].fillna(0).astype(int)
+# Convert to integer only if values are whole numbers
+df['cylinders'] = pd.to_numeric(df['cylinders'], errors='coerce').fillna(0).astype(int)
 
 # Changing odometer column to integer:
-df['odometer'] = df['odometer'].astype('Int64')
+# Convert to integer only if values are whole numbers
+df['odometer'] = pd.to_numeric(df['odometer'], errors='coerce').fillna(0).astype(int)
 
 # changing four wheel drive column to Boolean:
 df['is_4wd'] = df['is_4wd'].fillna(pd.NA).astype('boolean')
