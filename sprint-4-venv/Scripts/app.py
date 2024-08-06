@@ -10,7 +10,7 @@ dataset_path = os.path.join(root_dir, 'notebooks/vehicles_us.csv')
 print("Root Directory:", root_dir)
 print("Dataset Path:", dataset_path)
 
-df = pd.read_csv(dataset_path)
+df = pd.read_csv(dataset_path, encoding='utf-8')
 
 # Data cleaning
 # Get rid of old columns used for SDA
