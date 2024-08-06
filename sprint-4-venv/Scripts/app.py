@@ -16,6 +16,9 @@ df = pd.read_csv(dataset_path, encoding='utf-8')
 # Get rid of old columns used for SDA
 columns_to_remove = ['mileage_segment', 'days_listed_bin', 'car_age']
 df = df.drop(columns=columns_to_remove, errors='ignore')
+# price
+df['price'] = pd.to_numeric(df['price'], errors='coerce')  # Convert to numeric, setting invalid parsing as NaN
+df['price'] = df['price'].fillna(0)  # Replace NaNs with 0 or another appropriate value
 
 # Making model year column look correct:
 df['model_year'] = df['model_year'].astype(str).str.split('.').str[0]
