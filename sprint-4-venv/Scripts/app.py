@@ -12,22 +12,23 @@ print("Dataset Path:", dataset_path)
 
 df = pd.read_csv(dataset_path)
 
-#fixing up the data:
-# model year:
+# Data cleaning
+# Making model year column look correct:
+df['model_year'] = df['model_year'].astype(str).str.split('.').str[0]
+df = df[df['model_year'].str.isdigit()]
 df['model_year'] = df['model_year'].astype(str)
-# condition:
+
+# Making all unique values in column condition more professional:
 df['condition'] = df['condition'].replace('like new', 'nearly new')
-# Cylinders:
+
+# Changing cylinders column to integer:
 df['cylinders'] = df['cylinders'].fillna(0).astype(int)
-# Odometer:
+
+# Changing odometer column to integer:
 df['odometer'] = df['odometer'].astype('Int64')
-# is four wheel drive:
+
+# changing four wheel drive column to Boolean:
 df['is_4wd'] = df['is_4wd'].fillna(pd.NA).astype('boolean')
-
-
-
-
-
 
 # Streamlit App Title
 st.title("Vehicle Data Analysis")
@@ -35,29 +36,24 @@ st.title("Vehicle Data Analysis")
 # Sidebar for User Inputs
 st.sidebar.header("Filters")
 
-# Add filters for the app (example filters)
-model_years = sorted(df['model_year'].dropna().unique().astype('int64'), reverse=True)
-selected_year = st.sidebar.selectbox("Select Model Year", options=model_years)
+# Model Year Filter
+model_years = sorted(df['model_year'].dropna().unique(), reverse=True)
+selected_year = st.sidebar.selectbox("Select Model Year", options=["All"] + model_years)
 
 # Filter the DataFrame based on user input
-filtered_df = df[df['model_year'] == selected_year]
+filtered_df = df if selected_year == "All" else df[df['model_year'] == selected_year]
 
-# Display the filtered data
-st.write(f"Displaying data for model year {selected_year}:")
-st.write(filtered_df)
-
-# Add filter for four-wheel drive
-# Filter options for boolean values
-four_wheel_drive_options = [True, False]
-
-# Add filter for four-wheel drive
-selected_4wd = st.sidebar.selectbox("Select Four-Wheel Drive", options=["All"] + four_wheel_drive_options)
+# Four-Wheel Drive Filter
+four_wheel_drive_options = ["All", True, False]
+selected_4wd = st.sidebar.selectbox("Select Four-Wheel Drive", options=four_wheel_drive_options)
 
 # Filter the DataFrame based on user input
 if selected_4wd != "All":
     filtered_df = filtered_df[filtered_df['is_4wd'] == selected_4wd]
 
-
+# Display the filtered data
+st.write(f"Displaying data for model year {selected_year} and four-wheel drive status {selected_4wd}:")
+st.write(filtered_df)
 
 # Example Plot
 st.sidebar.header("Visualizations")
