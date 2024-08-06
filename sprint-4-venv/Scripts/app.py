@@ -5,12 +5,29 @@ import os
 
 # Correct the path to point to the dataset in the root directory
 root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-dataset_path = os.path.join(root_dir, 'notebooks/vehicles_us_cleaned.csv')
+dataset_path = os.path.join(root_dir, 'notebooks/vehicles_us.csv')
 
 print("Root Directory:", root_dir)
 print("Dataset Path:", dataset_path)
 
 df = pd.read_csv(dataset_path)
+
+#fixing up the data:
+# model year:
+df['model_year'] = df['model_year'].astype(str)
+# condition:
+df['condition'] = df['condition'].replace('like new', 'nearly new')
+# Cylinders:
+df['cylinders'] = df['cylinders'].fillna(0).astype(int)
+# Odometer:
+df['odometer'] = df['odometer'].astype('Int64')
+# is four wheel drive:
+df['is_4wd'] = df['is_4wd'].fillna(pd.NA).astype('boolean')
+
+
+
+
+
 
 # Streamlit App Title
 st.title("Vehicle Data Analysis")
