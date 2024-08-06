@@ -30,11 +30,11 @@ df['model_year'] = df['model_year'].astype(str)
 df['condition'] = df['condition'].replace('like new', 'nearly new')
 
 # Convert to integer only if values are whole numbers
-df['cylinders'] = pd.to_numeric(df['cylinders'], errors='coerce').fillna(0).astype(int)
+df['cylinders'] = pd.to_numeric(df['cylinders'], errors='coerce').fillna(0).astype('int32[pyarrow]')
 
 # Changing odometer column to integer:
 # Convert to integer only if values are whole numbers
-df['odometer'] = pd.to_numeric(df['odometer'], errors='coerce').fillna(0).astype(int)
+df['odometer'] = pd.to_numeric(df['odometer'], errors='coerce').fillna(0).astype('int32[pyarrow]')
 
 # changing four wheel drive column to Boolean:
 df['is_4wd'] = df['is_4wd'].fillna(pd.NA).astype('boolean')
