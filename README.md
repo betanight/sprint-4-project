@@ -17,4 +17,8 @@ _Dependencies_:
 
 All required packages for this project are listed in the requirements.txt file located in the root directory of the project.
 
+_Description_:
+
+The app is a car analysis app that allows users to explore a dataset of vehicles by applying various filters such as model year, condition, fuel type, number of cylinders, and four-wheel drive status. Users can visualize the filtered data through interactive plots, such as average price by condition or price vs. mileage. The app provides a sidebar for selecting filters and visualizations, updating the displayed results in real-time based on user choices. The app is built using Streamlit and Plotly Express, providing an intuitive interface for analyzing and understanding vehicle data.
+
 Here is the URL: https://sprint-4-project-8.onrender.com 
