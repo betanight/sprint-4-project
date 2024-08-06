@@ -12,6 +12,7 @@ The app, app.py, can be found in the scripts folder. This app allows users to fi
 Filtering and Visualization:
 
 In the app, you can filter the dataframe based on criteria such as the car's condition, fuel type, model year, number of cylinders, and whether it has four-wheel drive. The visualizations included in the app provide insights to assist in making informed decisions.
+
 Dependencies:
 
 All required packages for this project are listed in the requirements.txt file located in the root directory of the project.
