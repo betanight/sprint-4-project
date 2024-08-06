@@ -1,6 +1,16 @@
 # Sprint-4-project
-Hello! This project focuses on a large database of cars with multiple different specifications. Here is a little guide on how you can look into the project. You will find all of the EDA and SDA in my Jupyter notebook for this project, which is found in the notebooks folder and it is labled as "EDA.ipynb". Next, to look at everything to do with the app you will need to go to the file called app.py, which is found in the scripts folder. 
+Project Overview
+Welcome to the Car Database Analysis Project! This project explores a comprehensive dataset of vehicles with various specifications. Below is a brief guide to help you navigate through the project's components:
 
-This app is used to filter and find the car you are looking for, coming with different visualizations that can help you find the car that works best with your budget. In the dataframe section you can filter out the visible dataframe by adding in your needs for the car, such as its condition, fuel type, model year, the number of cylinders it has, and if it has four wheel drive or not. 
+Exploratory Data Analysis (EDA) and Statistical Data Analysis (SDA):
 
-The packages imported are found in the requirements.txt file in the home of this project. 
+All the exploratory and statistical analysis of the data are documented in the Jupyter notebook named EDA.ipynb, located in the notebooks folder.
+Streamlit Application:
+
+The app, app.py, can be found in the scripts folder. This app allows users to filter and explore the car data interactively, offering various visualizations to help you find a vehicle that suits your budget and preferences.
+Filtering and Visualization:
+
+In the app, you can filter the dataframe based on criteria such as the car's condition, fuel type, model year, number of cylinders, and whether it has four-wheel drive. The visualizations included in the app provide insights to assist in making informed decisions.
+Dependencies:
+
+All required packages for this project are listed in the requirements.txt file located in the root directory of the project.
