@@ -7,7 +7,7 @@ Exploratory Data Analysis (EDA) and Statistical Data Analysis (SDA):
 All the exploratory and statistical analysis of the data are documented in the Jupyter notebook named EDA.ipynb, located in the notebooks folder.
 Streamlit Application:
 
-The app, app.py, can be found in the scripts folder. This app allows users to filter and explore the car data interactively, offering various visualizations to help you find a vehicle that suits your budget and preferences.
+The app, app.py, can be found in the root directory. This app allows users to filter and explore the car data interactively, offering various visualizations to help you find a vehicle that suits your budget and preferences.
 
 Filtering and Visualization:
 
