@@ -111,8 +111,8 @@ if plot_option == "Average Price by Condition":
     fig = px.bar(avg_price_condition, x=avg_price_condition.index, y=avg_price_condition.values, labels={'x': 'Condition', 'y': 'Average Price'})
     st.plotly_chart(fig)
 elif plot_option == "Price vs. Mileage":
-    # Plot price vs. mileage
-    fig = px.histogram(df, x='odometer', y='price', title='Price vs. Mileage')
+    # Plot price vs. mileage as a scatter plot
+    fig = px.scatter(df, x='odometer', y='price', title='Price vs. Mileage', labels={'odometer': 'Mileage', 'price': 'Price'})
     st.plotly_chart(fig)
 elif plot_option == "Average price by Fuel type":
     # Plot average price by fuel type
