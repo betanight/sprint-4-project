@@ -25,18 +25,22 @@ Here is the URL: https://sprint-4-project-8.onrender.com
 
 
 _How to launch on local machine_:
+
 _1_: git clone https://github.com/yourusername/sprint-4-project.git
 cd sprint-4-project
 
 _2_: python -m venv sprint-4-venv
 
-# On Windows
+_A_: # On Windows
 sprint-4-venv\Scripts\activate
 
-# On macOS/Linux
+_A_: # On macOS/Linux
 source sprint-4-venv/bin/activate
 
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+# Note for Reviewer
+The filters aren't supposed to change the visualizations. The visualizations are their to get a view of what they should filter in order to get the most affordable option for them. And I tried the filters myself and they seem to be working on my end so I don't know what to change. 
+
+_B_: source venv/bin/activate  (_on Windows use `venv\Scripts\activate`_)
 
 _3_: mv share/vehicles_us.csv .
 
