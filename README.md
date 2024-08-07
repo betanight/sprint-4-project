@@ -22,3 +22,23 @@ _Description_:
 The app is a car analysis app that allows users to explore a dataset of vehicles by applying various filters such as model year, condition, fuel type, number of cylinders, and four-wheel drive status. Users can visualize the filtered data through interactive plots, such as average price by condition or price vs. mileage. The app provides a sidebar for selecting filters and visualizations, updating the displayed results in real-time based on user choices. The app is built using Streamlit and Plotly Express, providing an intuitive interface for analyzing and understanding vehicle data.
 
 Here is the URL: https://sprint-4-project-8.onrender.com 
+
+
+_How to launch on local machine_:
+_1_: git clone https://github.com/yourusername/sprint-4-project.git
+cd sprint-4-project
+
+_2_: python -m venv sprint-4-venv
+
+# On Windows
+sprint-4-venv\Scripts\activate
+
+# On macOS/Linux
+source sprint-4-venv/bin/activate
+
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+_3_: mv share/vehicles_us.csv .
+
+_4_: streamlit run app.py
+
