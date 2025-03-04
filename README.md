@@ -42,8 +42,3 @@ _B_: source venv/bin/activate  (_on Windows use `venv\Scripts\activate`_)
 _3_: mv share/vehicles_us.csv .
 
 _4_: streamlit run app.py
-
-
-# Note for Reviewer
-The filters aren't supposed to change the visualizations. The visualizations are their to get a view of what they should filter in order to get the most affordable option for them. And I tried the filters myself and they seem to be working on my end so I don't know what to change. 
-
